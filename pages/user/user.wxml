@@ -1,0 +1,41 @@
+<view class="header">
+  <view></view>
+  <text>预定历史</text>
+  <text bindtap="logout">| 退出登录</text>
+  <text bindtap="updatePwd">| 修改登录密码</text>
+</view>
+
+<view class="centent">
+  <view class="centent-title">
+    <view>座位类型</view>
+    <view>座位号</view>
+    <view>时间段</view>
+    <view>预约操作</view>
+  </view>
+
+  <block wx:for="{{userReserve}}" wx:key="userReserve">
+    <view class="centent-n">
+      <view>{{item.type}}</view>
+      <view>{{item.zw}}</view>
+      <view>{{item.starttime + '-' + item.endtime}}</view>
+      <view bindtap="cancelReserve" data-id="{{item.id}}" style="color:#3894FF">取消</view>
+    </view>
+  </block>
+</view>
+
+<!-- 自定义模态框 -->
+<!-- 退出登录 -->
+<mymodal show="{{exitLogin}}" height='33%' bindcancel="cancelExit" bindconfirm='confirmExit'>
+  <view>
+    <h3 class="my-tip">提示</h3>
+    <h4 class="my-input">退出登录</h4>
+  </view>
+</mymodal>
+
+<!-- 修改登录密码 -->
+<mymodal show="{{showModal}}" height='33%' bindcancel="cancel" bindconfirm='confirm'>
+  <view>
+    <h3 class="my-tip">提示</h3>
+    <input type="text" placeholder="{{placeholder}}" bindinput="saveNewPwd" value="{{newPwd}}" class="my-input" />
+  </view>
+</mymodal>

@@ -1,0 +1,11 @@
+<div class='my-mask' wx:if='{{show}}' bindtap='clickMask'>
+  　　<div class='my-modal-content' style='height:{{height}}'>
+    　　　　<div class='my-main-content'>
+      　　　　 <slot></slot>
+      　　　</div>
+    　　　　<div class='my-modal-btn-wrapper'>
+      　　　　　　<div class='my-cancel-btn' style='color:black' bindtap='cancel'>取消</div>
+      　　　　　　<div class='my-confirm-btn' style='color:#576b95' bindtap='confirm'>确定</div>
+      　　　 </div>
+    　　</div>
+</div>

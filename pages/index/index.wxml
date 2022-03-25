@@ -1,0 +1,849 @@
+<view class="header">
+    <image src="../../images/fz.png"></image>
+    预约座位表
+</view>
+
+<view class="kecheng">
+    <view class="kecheng-top">
+        <text>VIP</text>
+        <van-button type="info" round size="small" color="{{color1}}" bindtap="btn1">直播课程</van-button>
+        <van-button type="info" round size="small" color="{{color2}}" bindtap="btn2">绝密课程</van-button>
+    </view>
+    <view class="kecheng-bottom">
+        <text>普通卡座</text>
+        <van-button type="info" round size="small" color="{{color3}}" bindtap="btn3">点播课程</van-button>
+        <van-button type="info" round size="small" color="{{color4}}" bindtap="btn4">研学课程</van-button>
+    </view>
+</view>
+
+<view class="c1">
+    <view class="c1-top" wx:if="{{btn2}}">
+        <!-- 已经被选择 -->
+        <block wx:if="{{vip1}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP1</text>
+            </view>
+        </block>
+        <!-- 未被选择 -->
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP1">
+                <block wx:if="{{seats=='VIP1'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP1</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip2}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP2</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP2">
+                <block wx:if="{{seats=='VIP2'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP2</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip3}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP3</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP3">
+                <block wx:if="{{seats=='VIP3'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP3</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip4}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP4</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP4">
+                <block wx:if="{{seats=='VIP4'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP4</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip5}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP5</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP5">
+                <block wx:if="{{seats=='VIP5'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP5</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip6}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP6</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP6">
+                <block wx:if="{{seats=='VIP6'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP6</text>
+            </view>
+        </block>
+    </view>
+
+    <view class="c1-left" wx:if="{{btn1}}">
+        <view class="c1-left1">
+            <view class="c1-left1-top">
+                <!-- 已经被选择 -->
+                <block wx:if="{{a4}}">
+                    <view>
+                        <text>A4</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <!-- 未被选择 -->
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A4"><text>A4</text>
+                        <block wx:if="{{seats=='A4'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{a3}}">
+                    <view>
+                        <text>A3</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A3"><text>A3</text>
+                        <block wx:if="{{seats=='A3'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{a2}}">
+                    <view>
+                        <text>A2</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A2"><text>A2</text>
+                        <block wx:if="{{seats=='A2'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{a1}}">
+                    <view>
+                        <text>A1</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A1"><text>A1</text>
+                        <block wx:if="{{seats=='A1'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+            </view>
+
+            <view class="c1-left1-bottom">
+                <block wx:if="{{a5}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>A5</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A5">
+                        <block wx:if="{{seats=='A5'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>A5</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{a6}}">
+                    <view>
+
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>A6</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A6">
+                        <block wx:if="{{seats=='A6'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>A6</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{a7}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>A7</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A7">
+                        <block wx:if="{{seats=='A7'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>A7</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{a8}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>A8</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="A8">
+                        <block wx:if="{{seats=='A8'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>A8</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+
+        <view class="c1-left2">
+            <view class="c1-left1-top">
+                <block wx:if="{{b6}}">
+                    <view>
+                        <text>B6</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B6"><text>B6</text>
+                        <block wx:if="{{seats=='B6'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{b5}}">
+                    <view>
+                        <text>B5</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B5"><text>B5</text>
+                        <block wx:if="{{seats=='B5'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{b4}}">
+                    <view>
+                        <text>B4</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B4"><text>B4</text>
+                        <block wx:if="{{seats=='B4'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{b3}}">
+                    <view>
+                        <text>B3</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B3"><text>B3</text>
+                        <block wx:if="{{seats=='B3'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{b2}}">
+                    <view>
+                        <text>B2</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B2"><text>B2</text>
+                        <block wx:if="{{seats=='B2'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{b1}}">
+                    <view>
+                        <text>B1</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B1"><text>B1</text>
+                        <block wx:if="{{seats=='B1'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+            </view>
+
+            <view class="c1-left1-bottom">
+                <block wx:if="{{b7}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>B7</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B7">
+                        <block wx:if="{{seats=='B7'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>B7</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{b8}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>B8</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B8">
+                        <block wx:if="{{seats=='B8'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>B8</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{b9}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>B9</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B9">
+                        <block wx:if="{{seats=='B9'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>B9</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{b10}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>B10</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B10">
+                        <block wx:if="{{seats=='B10'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>B10</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{b11}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>B11</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B11">
+                        <block wx:if="{{seats=='B11'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>B11</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{b12}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>B12</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="B12">
+                        <block wx:if="{{seats=='B12'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>B12</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+
+        <view class="c1-left3">
+            <view class="c1-left1-top">
+                <block wx:if="{{c6}}">
+                    <view>
+                        <text>C6</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C6"><text>C6</text>
+                        <block wx:if="{{seats=='C6'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{c5}}">
+                    <view>
+                        <text>C5</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C5"><text>C5</text>
+                        <block wx:if="{{seats=='C5'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{c4}}">
+                    <view>
+                        <text>C4</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C4"><text>C4</text>
+                        <block wx:if="{{seats=='C4'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{c3}}">
+                    <view>
+                        <text>C3</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C3"><text>C3</text>
+                        <block wx:if="{{seats=='C3'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{c2}}">
+                    <view>
+                        <text>C2</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C2"><text>C2</text>
+                        <block wx:if="{{seats=='C2'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{c1}}">
+                    <view>
+                        <text>C1</text>
+                        <image src="{{yxsrc}}" class="img"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C1"><text>C1</text>
+                        <block wx:if="{{seats=='C1'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                    </view>
+                </block>
+            </view>
+
+            <view class="c1-left1-bottom">
+                <block wx:if="{{c7}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>C7</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C7">
+                        <block wx:if="{{seats=='C7'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>C7</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{c8}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>C8</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C8">
+                        <block wx:if="{{seats=='C8'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>C8</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{c9}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>C9</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C9">
+                        <block wx:if="{{seats=='C9'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>C9</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{c10}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>C10</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C10">
+                        <block wx:if="{{seats=='C10'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>C10</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{c11}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>C11</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C11">
+                        <block wx:if="{{seats=='C11'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>C11</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{c12}}">
+                    <view>
+                        <image src="{{yxsrc}}" class="img"></image>
+                        <text>C12</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view bindtap="chooseseat" data-seats="C12">
+                        <block wx:if="{{seats=='C12'}}">
+                            <image src="{{yxsrc}}" class="img"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="{{kxsrc}}" class="img"></image>
+                        </block>
+                        <text>C12</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    <view class="c1-right" wx:if="{{btn2}}">
+        <block wx:if="{{vip7}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP7</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP7">
+                <block wx:if="{{seats=='VIP7'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP7</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip8}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP8</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP8">
+                <block wx:if="{{seats=='VIP8'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP8</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip9}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP9</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP9">
+                <block wx:if="{{seats=='VIP9'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP9</text>
+            </view>
+        </block>
+
+        <block wx:if="{{vip10}}">
+            <view>
+                <image src="{{yxsrc}}" class="img"></image>
+                <text>VIP10</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view bindtap="chooseseat" data-seats="VIP10">
+                <block wx:if="{{seats=='VIP10'}}">
+                    <image src="{{yxsrc}}" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="{{kxsrc}}" class="img"></image>
+                </block>
+                <text>VIP10</text>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="settime">
+    <view class="starttime">
+        <view>开始时间：</view>
+        <view class="section">
+            <picker mode="date" value="{{date}}" start="{{date}}" end="{{date}}" bindchange="bindDateChange">
+                <view class="picker">
+                    {{date}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="section">
+            <picker mode="time" value="{{time}}" start="{{time}}" end="{{time}}" bindchange="bindTimeChange">
+                <view class="picker">
+                    {{time}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="endtime">
+        <view>结束时间：</view>
+        <view class="section">
+            <picker mode="date" value="{{date1}}" start="{{date}}" end="{{date}}" bindchange="bindDateChange1">
+                <view class="picker">
+                    {{date1}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="section">
+            <picker mode="time" value="{{time1}}" start="{{time}}" end="24:00" bindchange="bindTimeChange1">
+                <view class="picker">
+                    {{time1}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="attention">注：开始时间为当前时间，结束时间为当前时间至当天24点</view>
+</view>
+
+<view class="user">
+    <van-cell-group>
+        <van-field clearable label="姓名" placeholder="请输入姓名" bindinput="saveName" />
+        <van-field type="number" label="手机号" placeholder="请输入手机号码" value="{{phone}}" disabled />
+    </van-cell-group>
+    <view class="tijiao">
+        <van-button type="primary" round color="#3894FF" block bindtap="reserve">确定预约</van-button>
+    </view>
+
+</view>

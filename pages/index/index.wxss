@@ -1,0 +1,260 @@
+.header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.header image {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  left: 0px;
+  top: 3px;
+}
+
+.kecheng {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.kecheng .kecheng-top {
+  width: 100%;
+  height: 40px;
+  line-height: 38px;
+}
+
+.kecheng .kecheng-bottom {
+  width: 100%;
+  height: 40px;
+  line-height: 38px;
+}
+
+.kecheng .kecheng-top text,
+.kecheng .kecheng-bottom text {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.kecheng .kecheng-bottom van-button,
+.kecheng .kecheng-top van-button:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.kecheng .kecheng-top van-button:nth-of-type(1) {
+  margin-left: 54px;
+}
+
+.c1 {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.c1-top {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  /* background: red; */
+}
+
+.c1-top view {
+  width: 17%;
+  height: 50px;
+  float: left;
+  text-align: center;
+}
+
+.c1-top view image {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.c1-top view text {
+  display: block;
+  margin-top: -10px;
+}
+
+.c1-left {
+  width: 83%;
+  height: 250px;
+  /* float: left; */
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.c1-left1 {
+  width: 100%;
+  height: 33%;
+}
+
+.c1-left1-top {
+  width: 100%;
+  height: 50%;
+}
+
+.c1-left1-top view,
+.c1-left1-bottom view {
+  width: 16.66%;
+  height: 100%;
+  float: right;
+  text-align: center;
+}
+
+.c1-left1-top view {
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.c1-left1-top view image,
+.c1-left1-bottom view image {
+  width: 20px;
+  height: 20px;
+}
+
+.c1-left1-top view image {
+  margin-top: -4px;
+}
+
+.c1-left1-top view text {
+  margin-top: 10px;
+}
+
+.c1-left1-top view text,
+.c1-left1-bottom view text {
+  display: block;
+}
+
+.c1-left1-bottom {
+  width: 100%;
+  height: 50%;
+}
+
+.c1-left1-bottom view text {
+  margin-top: -6px;
+}
+
+.c1-left2 {
+  width: 100%;
+  height: 33%;
+}
+
+.c1-left3 {
+  width: 100%;
+  height: 34%;
+}
+
+.c1-right {
+  width: 17%;
+  height: 200px;
+  float: right;
+}
+
+.c1-right view {
+  width: 100%;
+  height: 62.5px;
+  text-align: center;
+  line-height: 62.5px;
+  position: relative;
+}
+
+.c1-right view:nth-of-type(2) {
+  position: relative;
+  top: -15px;
+}
+
+.c1-right view:nth-of-type(3) {
+  position: relative;
+  top: -30px;
+}
+
+.c1-right view:nth-of-type(4) {
+  position: relative;
+  top: -45px;
+}
+
+.c1-right view image {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.c1-right view text {
+  display: block;
+  margin-top: -50px;
+}
+
+/* 选择时间部分 */
+.settime {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #ccc;
+  line-height: 38px;
+  font-size: 14px;
+}
+
+.settime view {
+  float: left;
+  margin-left: 5px;
+}
+
+.settime .starttime {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 11px;
+}
+
+.settime .endtime {
+  width: 110%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 25px;
+  border-bottom: 1px solid #ccc;
+  margin-left: -10px;
+}
+
+.settime .attention {
+  width: 100%;
+  height: 50%;
+  line-height: 19px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.settime .attention::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 0.5px;
+  background: #ccc;
+  position: relative;
+  bottom: -15px;
+  left: 0;
+  margin-left: -25px;
+}
+
+.user {
+  /* background: red; */
+  padding: 0 6px;
+}
+
+.tijiao {
+  border-top: 1px solid #ccc;
+  width: 110%;
+  margin-left: -18px;
+  box-sizing: border-box;
+  padding: 15px 25px 50px;
+}

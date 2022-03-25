@@ -1,0 +1,38 @@
+page {
+  background: #3894FF;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-top: 30rpx;
+  width: 380rpx;
+  height: 60rpx;
+  border: 1px solid rgb(255, 255, 255);
+  background: #fff;
+  padding-left: 10rpx;
+}
+
+input:nth-of-type(1) {
+  margin-top: 300rpx;
+}
+
+button {
+  width: 150rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top: 60rpx;
+  border: 1px solid rgb(126, 69, 69);
+  border-radius: 0;
+}
+
+image {
+  margin-top: 100rpx;
+  width: 454rpx;
+  height: 164rpx;
+}

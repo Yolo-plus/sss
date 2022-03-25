@@ -1,0 +1,8 @@
+var filter = {
+        numberToFixed: function(value,arr){
+            return arr.indexOf(value)
+        }
+    }
+    module.exports = {
+        numberToFixed: filter.numberToFixed
+    }

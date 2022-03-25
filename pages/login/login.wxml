@@ -1,0 +1,6 @@
+<view class="main">
+  <image src="/images/slogan.png"></image>
+  <input placeholder="请输入手机号" type="text" bindinput="savePhone" />
+  <input placeholder="请输入密码" type="password" bindinput="savePwd" value="{{password}}" />
+  <button bindtap="btnindex" bindtap="handleSubmit">登录</button>
+</view>
